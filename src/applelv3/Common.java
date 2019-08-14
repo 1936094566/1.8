@@ -61,6 +61,12 @@ public class Common {
         );
     }
 
-
+    public static void delay(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
