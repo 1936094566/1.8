@@ -49,7 +49,7 @@ public class AppleTest {
 
         apples.sort((Apple apple1, Apple apple2) -> apple2.getWeight().compareTo(apple1.getWeight()));
 
-     /*   Thread t = new Thread(()->System.out.println("HELLO WORLD"));
+     /*   thread t = new thread(()->System.out.println("HELLO WORLD"));
         t.start();*/
 
         process(() -> System.out.println("hello"));
