@@ -1,6 +1,6 @@
 package thread.runnable;
 
-import thread.TicketWindow;
+import java.util.LinkedList;
 
 /**
  * @author machao
@@ -10,13 +10,21 @@ import thread.TicketWindow;
  **/
 public class Bank {
     public static void main(String[] args) {
-        final TicketWindowRunnable twr = new TicketWindowRunnable();
-        Thread thread1 = new Thread(twr,"1号");
-        Thread thread2 = new Thread(twr,"2号");
-        Thread thread3 = new Thread(twr,"3号");
-        thread1.start();
-        thread2.start();
-        thread3.start();
+//        final TicketWindowRunnable twr = new TicketWindowRunnable();
+//        Thread thread1 = new Thread(twr,"1号");
+//        Thread thread2 = new Thread(twr,"2号");
+//        Thread thread3 = new Thread(twr,"3号");
+//        thread1.start();
+//        thread2.start();
+//        thread3.start();
+
+        LinkedList<String> list = new LinkedList<>();
+        list.add("zhangsan");
+        list.add("lisi");
+        list.add("wangwu");
+        list.add(2,"wxs");
+        System.out.println(list);
+
 
     }
 }
