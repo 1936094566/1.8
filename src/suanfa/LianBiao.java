@@ -1,6 +1,5 @@
 package suanfa;
 
-
 /**
  * @author machao
  * @date 2019/8/27
@@ -27,7 +26,6 @@ public class LianBiao<T> {
         return size;
     }
 
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -51,7 +49,7 @@ public class LianBiao<T> {
         } else if (index == 0) {
             //插入头部
             addFirst(t);
-        } else if (size == index+1) {
+        } else if (size == index + 1) {
             //插入尾部
             addLast(t);
         } else {
@@ -71,26 +69,51 @@ public class LianBiao<T> {
      */
     public void addLast(T t) {
         Node<T> node = new Node<>(t);
-        if(header == null){
+        if (header == null) {
             header = node;
         }
-        if(last == null){
+        if (last == null) {
             last = node;
-        }else{
+        } else {
             last.nextNode = node;
             last = node;
         }
         size++;
     }
 
+    /**
+     * 从集合中移除对象
+     *
+     * @param index
+     */
+    public void remove(int index) {
+
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(" 超过链表边界 ");
+        }
+        if (index == 0) {
+            Node<T> node = getNode(index + 1);
+            header = node;
+        } else if (index + 1 == size) {
+            Node<T> node = getNode(index - 1);
+            node.nextNode = null;
+            last = node;
+        } else {
+            Node<T> preNode = getNode(index - 1);
+            Node<T> node = preNode.nextNode;
+            preNode.nextNode = node.nextNode;
+        }
+        size --;
+    }
+
     public void addFirst(T t) {
         Node<T> node = new Node<>(t);
-        if(last == null){
+        if (last == null) {
             last = node;
         }
-        if(header == null){
+        if (header == null) {
             header = node;
-        }else{
+        } else {
             header.nextNode = node;
             header = node;
         }
@@ -115,7 +138,6 @@ public class LianBiao<T> {
         return node;
     }
 
-
     class Node<F> {
         public F data;
         public Node<F> nextNode;
@@ -134,6 +156,5 @@ public class LianBiao<T> {
             return data.toString();
         }
     }
-
 
 }

@@ -19,6 +19,12 @@ public class TestClass {
         lianBiao.add("zhaoliu");
         lianBiao.add(4,"zdjz");
         System.out.println(lianBiao);
-
+        lianBiao.remove(4);
+        System.out.println(lianBiao);
+        lianBiao.remove(2);
+        System.out.println(lianBiao);
+        lianBiao.remove(0);
+        System.out.println(lianBiao);
+        System.out.println(lianBiao.getSize());
     }
 }
