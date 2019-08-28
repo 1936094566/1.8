@@ -1,5 +1,8 @@
 package suanfa;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 /**
  * @author machao
  * @date 2019/8/27
@@ -156,5 +159,4 @@ public class LianBiao<T> {
             return data.toString();
         }
     }
-
 }

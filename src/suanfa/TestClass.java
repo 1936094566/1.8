@@ -9,9 +9,9 @@ import org.junit.Test;
  * @description
  **/
 public class TestClass {
-    @Test
+    //@Test
     public  void testLianBiao(){
-
+        //27 03
         LianBiao<String> lianBiao = new LianBiao<>();
         lianBiao.add("zhangsan");
         lianBiao.add("lisi");
@@ -27,4 +27,26 @@ public class TestClass {
         System.out.println(lianBiao);
         System.out.println(lianBiao.getSize());
     }
+
+
+    @Test
+    public void testQueueLianBiao(){
+        QueueLianBiao<String> stringQueueLianBiao = new QueueLianBiao<>();
+        stringQueueLianBiao.inQueue("A");
+        stringQueueLianBiao.inQueue("B");
+        stringQueueLianBiao.inQueue("C");
+        stringQueueLianBiao.inQueue("D");
+        stringQueueLianBiao.inQueue("E");
+        System.out.println(stringQueueLianBiao);
+        System.out.println(stringQueueLianBiao.outQueue());
+        System.out.println(stringQueueLianBiao.outQueue());
+        System.out.println(stringQueueLianBiao.outQueue());
+        System.out.println(stringQueueLianBiao.outQueue());
+        System.out.println(stringQueueLianBiao.outQueue());
+        stringQueueLianBiao.inQueue("F");
+        stringQueueLianBiao.inQueue("G");
+        stringQueueLianBiao.inQueue("H");
+        System.out.println(stringQueueLianBiao);
+    }
+
 }
