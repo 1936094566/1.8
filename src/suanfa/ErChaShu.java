@@ -17,6 +17,14 @@ public class ErChaShu {
          public TreeNode(T data){
             this.data = data;
          }
+        /**
+         * 清空二叉树
+         */
+        public  void clear(){
+            leftNode = null;
+            rightNode = null;
+            data = null;
+        }
     }
     public static <T>TreeNode initTree(LinkedList<T> datas){
         TreeNode<T> returnData = null;
@@ -29,8 +37,10 @@ public class ErChaShu {
             }
         }
         return returnData;
-    }
 
+
+
+    }
 
     public static void main(String[] args) {
         LinkedList<Integer> data = new LinkedList<>();
@@ -44,6 +54,8 @@ public class ErChaShu {
         data.add(8);
         data.add(9);
         TreeNode treeNode = initTree(data);
+        treeNode.clear();
+        System.out.println(treeNode);
     }
 
 
