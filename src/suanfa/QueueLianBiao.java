@@ -42,6 +42,15 @@ public class QueueLianBiao<E> {
         return data;
     }
 
+    public void clear(){
+        if(startNode != null){
+            startNode = null;
+        }
+        if(endNode != null){
+            endNode = null;
+        }
+
+    }
 
     @Override
     public String toString() {

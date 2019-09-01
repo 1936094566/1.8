@@ -46,7 +46,10 @@ public class TestClass {
         stringQueueLianBiao.inQueue("F");
         stringQueueLianBiao.inQueue("G");
         stringQueueLianBiao.inQueue("H");
+        stringQueueLianBiao.inQueue("L");
         System.out.println(stringQueueLianBiao);
+        stringQueueLianBiao.clear();
+        System.out.println("这里是clear之后:"+stringQueueLianBiao);
     }
 
 }
