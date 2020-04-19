@@ -1,6 +1,5 @@
 package suanfa;
 
-import org.junit.Test;
 
 /**
  * @author machao
@@ -29,7 +28,6 @@ public class TestClass {
     }
 
 
-    @Test
     public void testQueueLianBiao(){
         QueueLianBiao<String> stringQueueLianBiao = new QueueLianBiao<>();
         stringQueueLianBiao.inQueue("A");
