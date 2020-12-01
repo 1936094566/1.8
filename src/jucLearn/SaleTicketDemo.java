@@ -51,7 +51,11 @@ public class SaleTicketDemo {
                 ticket.sale();
             }
         }, "售票员C").start();
-
+        new Thread(()->{
+            for (int i = 0; i < 40; i++) {
+                ticket.sale();
+            }
+        },"售票员D").start();
     }
 
 
